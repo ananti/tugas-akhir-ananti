@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+android:id="@+id/widget28"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+android:orientation="vertical"
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:background="@drawable/bg"
+>
+	<Button
+	android:id="@+id/bMainMenu"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:layout_marginTop="5px"
+	android:text="Main Menu"
+	android:textSize="13sp"
+	android:layout_gravity="right"
+	></Button>
+	
+	<TextView
+	android:id="@+id/widget29"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:layout_marginTop="10px"
+	android:text="Register"
+	android:textSize="21sp"
+	android:textStyle="bold"
+	android:textColor="#ffff9900"
+	android:layout_gravity="center_horizontal"
+	>
+	</TextView>
+	<TextView
+	android:id="@+id/widget30"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:layout_marginTop="30px"
+	android:text="Username"
+	android:textStyle="bold"
+	android:layout_gravity="center_horizontal"
+	>
+	</TextView>
+	<EditText
+	android:id="@+id/widget31"
+	android:layout_width="200px"
+	android:layout_height="wrap_content"
+	android:layout_gravity="center_horizontal"
+	>
+	</EditText>
+	<TextView
+	android:id="@+id/widget32"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:layout_marginTop="10px"
+	android:text="Password"
+	android:textStyle="bold"
+	android:layout_gravity="center_horizontal"
+	>
+	</TextView>
+	<EditText
+	android:id="@+id/widget33"
+	android:layout_width="200px"
+	android:layout_height="wrap_content"
+	android:password="true"
+	android:layout_gravity="center_horizontal"
+	>
+	</EditText>
+	<TextView
+	android:id="@+id/widget34"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:layout_marginTop="10px"
+	android:text="Email"
+	android:textStyle="bold"
+	android:layout_gravity="center_horizontal"
+	>
+	</TextView>
+	<EditText
+	android:id="@+id/widget35"
+	android:layout_width="200px"
+	android:layout_height="wrap_content"
+	android:layout_gravity="center_horizontal"
+	>
+	</EditText>
+	<Button
+	android:id="@+id/bRegForm"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:layout_marginTop="10px"
+	android:text="Register"
+	android:layout_gravity="center_horizontal"
+	>
+</Button>
+</LinearLayout>

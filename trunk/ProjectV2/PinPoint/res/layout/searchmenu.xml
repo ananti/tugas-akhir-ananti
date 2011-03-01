@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:background="@drawable/bg"
+  >
+  
+  <ScrollView
+		android:id="@+id/widget28"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		>
+		
+		<AbsoluteLayout
+			android:id="@+id/widget30"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"	
+			>
+		
+			<TextView
+		    android:id="@+id/txtv01"
+		    android:layout_width="fill_parent"
+			android:layout_height="wrap_content"			
+			android:text="Search Place"
+			android:gravity="center_vertical|center_horizontal" 
+			android:textColor="#ffff9900"
+			android:textSize="21sp"
+			android:textStyle="normal|bold"
+			android:layout_y="19px"
+			>
+			</TextView>	    		
+			
+			<Spinner
+			android:id="@+id/scategory"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_y="75px"
+			>
+			</Spinner>
+			
+			<EditText
+			android:id="@+id/edit01"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_y ="130px"
+			></EditText>
+			
+			<TextView 
+			android:id="@+id/txtv02"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_x="10px"
+			android:layout_y="170px"
+			android:text="*)Place's Name is OPTIONAL"
+			android:textColor="#ffff9900"
+			android:textSize="15sp"
+			android:textStyle="normal|bold"
+			>
+			</TextView>
+			
+			<Button 
+			android:id="@+id/button01"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Search"
+			android:hint="search the nearest place"
+			android:layout_y="210px">
+			</Button>
+			
+		</AbsoluteLayout>
+			
+	</ScrollView>
+</LinearLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, MainMenu!</string>
+    <string name="app_name">PinPoint</string>
+    
+    <string name="place_prompt">Choose place</string>
+    <string-array name="place_array">
+    	<item>All Place</item>
+    	<item>Custom Place</item>
+    </string-array>
+    
+    <string name="category_prompt">Choose Category</string>
+    <string-array name="category_array">
+    	<item>Hotel</item>
+    	<item>Restaurant</item>
+    	<item>ATM</item>
+    	<item>Gas Station</item>
+    	<item>Hospital</item>
+    	<item>Store/Mall</item>
+    </string-array>
+</resources>

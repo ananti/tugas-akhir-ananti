@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android" 
+	android:id="@+id/LinearLayout01"
+	android:layout_width="fill_parent" 
+	android:paddingLeft="10sp" 
+	android:paddingRight="10sp"
+	android:layout_height="fill_parent"
+	android:orientation="vertical" 
+	android:paddingTop="10dip">
+	
+	<TextView 
+		android:layout_height="wrap_content"
+		android:layout_width="fill_parent" 
+		android:id="@+id/txtName"
+		android:text="Name" 
+		android:typeface="monospace" 
+		android:textSize="16sp" 
+		android:textStyle="bold"
+		android:textColor="#e40166">
+	</TextView>
+	<LinearLayout 
+		android:id="@+id/LinearLayout02"
+		android:layout_height="wrap_content"
+		android:layout_width="fill_parent">
+		<TextView 
+			android:id="@+id/TextView01" 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:typeface="serif"
+			android:textColor="#333333"
+			android:text="0.3 km"
+			android:textStyle="bold" 
+			android:textSize="14sp">
+		</TextView>
+		<TextView 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:typeface="serif"
+			android:textColor="#333333" 
+			android:id="@+id/txtLatitude" 
+			android:textSize="14sp">
+		</TextView>
+	</LinearLayout>	
+	<LinearLayout 
+		android:id="@+id/LinearLayout02"
+		android:layout_height="wrap_content"
+		android:layout_width="fill_parent"
+		android:paddingBottom="5dip">
+		
+		<TextView 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:text="Mail"
+			android:id="@+id/txtLongitude"
+			android:typeface="serif"
+			android:textColor="#333333" 
+			android:textSize="14sp" 
+			android:layout_weight="1">
+		</TextView>		
+	</LinearLayout>	
+
+</LinearLayout>

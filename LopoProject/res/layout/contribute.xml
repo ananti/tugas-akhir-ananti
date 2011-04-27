@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:background="#e0e0df">
+  
+<RelativeLayout
+	android:id="@+id/actionbar"
+	android:orientation="horizontal" 
+	android:layout_width="fill_parent"
+	android:layout_height="50dip" 
+	>
+	
+		<ImageView 
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"	
+		android:layout_marginLeft="5dip"
+		android:src="@drawable/locpo"
+		android:layout_alignParentTop="true"
+		android:layout_alignParentBottom="true"/>	
+		
+		<Button 
+		android:layout_width="wrap_content" 
+		android:background="@drawable/searchbutton"
+		android:layout_height="wrap_content"
+		android:id="@+id/search" 
+		android:layout_toLeftOf="@+id/borderone"
+		android:layout_alignParentRight="true"		
+		/>		
+		
+		<ImageView 
+		android:layout_width="wrap_content" 
+		android:src="#515150" 
+		android:layout_height="wrap_content"
+		android:id="@+id/borderone" 
+		android:layout_alignParentTop="true"
+		android:layout_alignParentBottom="true"
+		android:layout_alignBottom="@+id/contribute" 		
+		android:layout_toLeftOf="@+id/contribute" />
+		
+</RelativeLayout>
+
+	<ScrollView
+	android:id="@+id/widget39"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:layout_below="@+id/actionbar"
+	android:fadeScrollbars="true"
+	>
+	<RelativeLayout
+		android:id="@+id/con"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:padding="20dip"
+		>
+		<TextView
+		android:id="@+id/widget41"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:text="Contribute Place"
+		android:textSize="18sp"
+		android:textStyle="bold"
+		android:textColor="#333333"
+		android:layout_marginBottom="20dip"
+		android:gravity="center_vertical|center_horizontal"
+		/>
+		
+		<EditText
+		android:id="@+id/txtPlaceName"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:hint="Place Name"
+		android:layout_below="@+id/widget41"
+		android:layout_marginBottom="10dip"
+		/>
+		
+		<Spinner
+		android:id="@+id/sCategory"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/txtPlaceName"
+		android:layout_marginBottom="10dip"
+		>
+		</Spinner>
+		
+		<EditText
+		android:id="@+id/txtLatitude"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/sCategory"
+		android:hint="Latitude"		
+		android:layout_marginBottom="10dip"
+		>
+		</EditText>
+		
+		<EditText
+		android:id="@+id/txtLongitude"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/txtLatitude"
+		android:hint="Longitude"
+		android:layout_marginBottom="10dip">
+		</EditText>
+		
+		<EditText
+		android:id="@+id/txtAddress"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/txtLongitude"
+		android:hint="Address"
+		android:layout_marginBottom="10dip">
+		</EditText>
+		
+		<EditText
+		android:id="@+id/txtPhone"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/txtAddress"
+		android:hint="Phone Number"
+		android:layout_marginBottom="10dip">
+		</EditText>
+		
+		<EditText
+		android:id="@+id/txtDescription"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/txtPhone"
+		android:hint="Description"
+		android:layout_marginBottom="30dip">
+		</EditText>
+		
+		<RelativeLayout
+		android:id="@+id/opsi"
+		android:layout_below="@+id/txtDescription"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:background="@drawable/roundshapepink"
+		android:padding="15dip"
+		>
+			<TextView
+			android:id="@+id/widget51"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="*) OPTIONAL"
+			android:textStyle="bold"
+			android:textColor="#ffffff"
+			android:layout_marginBottom="20dip"
+			>
+			</TextView>
+			
+			<EditText
+			android:id="@+id/txtUrlWsdl"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/widget51"
+			android:hint="Url WSDL: http://IP_ADD:8080/Ws/WebserviceService?WSDL"
+			android:layout_marginBottom="10dip"
+			>
+			</EditText>
+			
+			<EditText
+			android:id="@+id/txtMethod"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/txtUrlWsdl"
+			android:layout_marginBottom="10dip"
+			android:hint="Method"
+			>
+			</EditText>
+			
+			<EditText
+			android:id="@+id/txtNamespace"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/txtMethod"
+			android:layout_marginBottom="10dip"
+			android:hint="Namespace: http://webservice.app.com/"
+			>
+			</EditText>
+			
+			<EditText
+			android:id="@+id/txtParameter1"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/txtNamespace"
+			android:hint="Output Parameter 1"
+			android:layout_marginBottom="10dip"
+			>
+			</EditText>
+			
+			<EditText
+			android:id="@+id/txtParameter2"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/txtParameter1"
+			android:hint="Output Parameter 2"
+			android:layout_marginBottom="10dip"
+			>
+			</EditText>
+			
+			<EditText
+			android:id="@+id/txtParameter3"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/txtParameter2"
+			android:hint="Output Parameter 3"
+			android:layout_marginBottom="10dip"
+			>
+			</EditText>
+		</RelativeLayout>
+		<Button
+		android:id="@+id/bAddPlace"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:text="Add Place"
+		android:layout_below="@+id/opsi"
+		android:layout_marginTop="15dip"
+		>
+		</Button>
+	</RelativeLayout>
+	
+	</ScrollView>
+</RelativeLayout>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent" 
+	android:id="@+id/foreground"
+	android:background="#e0e0df">
+
+	<RelativeLayout
+	android:id="@+id/actionbar"
+	android:orientation="horizontal" 
+	android:layout_width="fill_parent"
+	android:layout_height="50dip" 
+	>
+	
+		<ImageView 
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"	
+		android:layout_marginLeft="5dip"
+		android:src="@drawable/locpo"
+		android:layout_alignParentTop="true"
+		android:layout_alignParentBottom="true"/>
+		
+		<ImageView 
+		android:layout_width="1px" 
+		android:src="#515150"
+		android:layout_height="wrap_content" 		
+		android:id="@+id/bordertwo" 
+		android:layout_toLeftOf="@+id/search"
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentTop="true" />
+		
+		<Button 
+		android:background="@drawable/searchbutton"
+		android:id="@+id/search" 
+		android:layout_toLeftOf="@+id/borderone"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content" 
+		android:layout_centerVertical="true" 	
+		android:scaleType="fitXY"		
+		/>		
+		
+		<ImageView 
+		android:layout_width="wrap_content" 
+		android:src="#515150" 
+		android:layout_height="wrap_content"
+		android:id="@+id/borderone" 
+		android:layout_alignParentTop="true"
+		android:layout_alignParentBottom="true"
+		android:layout_alignBottom="@+id/contribute" 		
+		android:layout_toLeftOf="@+id/contribute" />
+
+		<Button 
+		android:background="@drawable/contributebutton" 		
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content" 
+		android:layout_alignParentRight="true"
+		android:layout_centerVertical="true" 
+		android:id="@+id/contribute"				
+		android:scaleType="fitXY" />
+		
+	</RelativeLayout>
+	
+	<ListView 
+ 		android:id="@+id/lvMainMenu" 
+ 		android:layout_height="wrap_content"
+ 		android:layout_width="fill_parent"
+ 		android:layout_below="@+id/actionbar"
+ 		android:paddingTop="20dip"
+ 		android:layout_marginTop="0dip"
+ 		android:layout_marginLeft="10dip"
+ 		android:layout_marginRight="10dip"
+ 		android:layout_marginBottom="47dip"
+ 		android:cacheColorHint="#00000000"
+ 		android:divider="@drawable/shapedivider"
+ 		>
+ 	</ListView>
+ 	
+ 	<RelativeLayout
+	android:id="@+id/bgbottom"
+	android:orientation="horizontal" 
+	android:layout_width="fill_parent"
+	android:layout_height="48dip"	
+	android:layout_alignParentBottom="true"				
+	android:scaleType="fitXY"
+	android:layout_marginBottom="2dip"
+	></RelativeLayout>
+ 	
+</RelativeLayout>
+

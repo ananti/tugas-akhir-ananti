@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="horizontal" 
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent" 
+	android:id="@+id/foreground"
+	android:background="#e0e0df">
+
+	<RelativeLayout
+	android:id="@+id/actionbar"
+	android:orientation="horizontal" 
+	android:layout_width="fill_parent"
+	android:layout_height="50dip" 
+	>
+	
+		<ImageView 
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"	
+		android:layout_marginLeft="5dip"
+		android:src="@drawable/locpo"
+		android:layout_alignParentTop="true"
+		android:layout_alignParentBottom="true"/>
+		
+		<ImageView 
+		android:layout_width="1px" 
+		android:src="#515150"
+		android:layout_height="wrap_content" 		
+		android:id="@+id/bordertwo" 
+		android:layout_toLeftOf="@+id/search"
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentTop="true" />
+		
+		<Button 
+		android:layout_width="wrap_content" 
+		android:background="@drawable/searchbutton"
+		android:layout_height="wrap_content"
+		android:id="@+id/search" 
+		android:layout_toLeftOf="@+id/borderone"		
+		/>		
+		
+		<ImageView 
+		android:layout_width="wrap_content" 
+		android:src="#515150" 
+		android:layout_height="wrap_content"
+		android:id="@+id/borderone" 
+		android:layout_alignParentTop="true"
+		android:layout_alignParentBottom="true"
+		android:layout_alignBottom="@+id/contribute" 		
+		android:layout_toLeftOf="@+id/contribute" />
+
+		<Button 
+		android:background="@drawable/contributebutton" 		
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content" 
+		android:layout_alignParentRight="true"
+		android:layout_centerVertical="true" 
+		android:id="@+id/contribute"				
+		android:scaleType="fitXY" />
+		
+	</RelativeLayout>
+	<RelativeLayout
+		android:id="@+id/layoutlogin"
+		android:layout_width = "fill_parent"
+		android:layout_height = "wrap_content"
+		android:background="@drawable/roundshape"
+		android:layout_below="@+id/actionbar"	
+		android:layout_marginTop="19dip"
+		android:layout_marginLeft="10dip"
+		android:layout_marginRight="10dip"
+		android:paddingTop="5dip"
+		android:paddingLeft="10dip"
+		android:paddingRight="10dip"
+		android:paddingBottom="20dip"
+	>
+	
+		<TextView
+		android:id="@+id/widget43"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="15dip"
+		android:layout_marginLeft="10dip"
+		android:layout_marginRight="10dip"
+		android:layout_marginBottom="15dip"
+		android:text="Login"
+		android:textSize="18sp"
+		android:textStyle="bold"
+		android:textColor="#333333"
+		android:gravity="center_vertical|center_horizontal" />
+		
+					
+		<EditText
+			android:id="@+id/txtUsername"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/widget43"
+			android:layout_marginLeft="10dip"
+			android:layout_marginRight="10dip"
+			android:layout_marginBottom="10dip"
+			android:layout_gravity="center_horizontal" 
+			android:hint="username"/>
+			
+		<EditText
+			android:id="@+id/txtPassword"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/txtUsername"
+			android:layout_marginLeft="10dip"
+			android:layout_marginRight="10dip"
+			android:layout_marginBottom="10dip"
+			android:layout_gravity="center_horizontal"
+			android:password="true" 
+			android:hint="password"/>
+			
+		<Button		
+			android:id="@+id/bLogin"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/txtPassword"
+			android:layout_marginLeft="10dip"
+			android:layout_marginRight="10dip"
+			android:layout_marginBottom="40dip"
+			android:layout_gravity="center_horizontal" 
+			android:text="Login"/>	
+	
+	</RelativeLayout>
+	<RelativeLayout
+	 android:layout_width="fill_parent"
+	 android:layout_height="wrap_content"
+	 android:layout_below="@+id/layoutlogin"
+	 android:background="@drawable/roundshapepink"
+	 android:layout_margin="15dip"
+	 android:padding="20dip"
+	 >
+		<Button
+			android:id="@+id/bRegister"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:text="Register Now!"/>
+	</RelativeLayout>
+</RelativeLayout>
+

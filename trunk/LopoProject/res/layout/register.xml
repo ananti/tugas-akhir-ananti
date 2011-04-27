@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:background="#e0e0df">
+  
+  <RelativeLayout
+	android:id="@+id/actionbar"
+	android:orientation="horizontal" 
+	android:layout_width="fill_parent"
+	android:layout_height="50dip" 
+	>
+	
+		<ImageView 
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"	
+		android:layout_marginLeft="5dip"
+		android:src="@drawable/locpo"
+		android:layout_alignParentTop="true"
+		android:layout_alignParentBottom="true"/>
+		
+		<ImageView 
+		android:layout_width="1px" 
+		android:src="#515150"
+		android:layout_height="wrap_content" 		
+		android:id="@+id/bordertwo" 
+		android:layout_toLeftOf="@+id/search"
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentTop="true" />
+		
+		<Button 
+		android:layout_width="wrap_content" 
+		android:background="@drawable/searchbutton"
+		android:layout_height="wrap_content"
+		android:id="@+id/search" 
+		android:layout_toLeftOf="@+id/borderone"		
+		/>		
+		
+		<ImageView 
+		android:layout_width="wrap_content" 
+		android:src="#515150" 
+		android:layout_height="wrap_content"
+		android:id="@+id/borderone" 
+		android:layout_alignParentTop="true"
+		android:layout_alignParentBottom="true"
+		android:layout_alignBottom="@+id/contribute" 		
+		android:layout_toLeftOf="@+id/contribute" />
+
+		<Button 
+		android:background="@drawable/contributebutton" 		
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content" 
+		android:layout_alignParentRight="true"
+		android:layout_centerVertical="true" 
+		android:id="@+id/contribute"				
+		android:scaleType="fitXY" />
+		
+	</RelativeLayout>
+	
+	<RelativeLayout
+		android:layout_below="@+id/actionbar"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_margin="20dip"
+  	>
+	  <TextView
+			android:id="@+id/widget1"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="20dip"
+			android:layout_marginLeft="10dip"
+			android:layout_marginRight="10dip"
+			android:layout_marginBottom="30dip"
+			android:text="Register"
+			android:textSize="18sp"
+			android:textStyle="bold"
+			android:textColor="#333333"
+			android:gravity="center_vertical|center_horizontal" />
+			
+		<EditText
+			android:id="@+id/txtUser"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/widget1"
+			android:layout_marginLeft="10dip"
+			android:layout_marginRight="10dip"
+			android:layout_marginBottom="5dip"
+			android:hint="username" />	
+			
+		<EditText
+			android:id="@+id/txtPass"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/txtUser"
+			android:layout_marginLeft="10dip"
+			android:layout_marginRight="10dip"
+			android:layout_marginBottom="5dip"
+			android:password="true" 
+			android:hint="password"/>
+			
+		<EditText
+			android:id="@+id/txtMail"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/txtPass"
+			android:layout_marginLeft="10dip"
+			android:layout_marginRight="10dip"
+			android:layout_marginBottom="20dip"
+			android:hint="email" />	
+			
+		<Button		
+			android:id="@+id/bReg"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/txtMail"
+			android:layout_marginLeft="10dip"
+			android:layout_marginRight="10dip"
+			android:layout_marginBottom="20dip" 
+			android:text="Register"/>
+	</RelativeLayout>	
+		
+</RelativeLayout>

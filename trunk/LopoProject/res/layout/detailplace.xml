@@ -65,6 +65,7 @@
 		android:layout_height="fill_parent"
 		android:fadeScrollbars="true"
 		android:background="#e0e0df"
+		android:layout_marginLeft="10dip"
 		android:layout_below="@+id/actionbar"
 		> 
 	<RelativeLayout
@@ -72,7 +73,7 @@
 		 android:layout_width="fill_parent"
 		 android:layout_height="fill_parent"
 		 android:layout_marginRight="10dip"
-		 android:background="#e0e0df"		 
+		 android:background="#e0e0df"
 		 >
 	
 	<TextView
@@ -87,11 +88,7 @@
 		android:layout_marginTop="20dip"
 		android:gravity="center_vertical|center_horizontal"
 		
-		/>
-	<View   android:id="@+id/firstDivider"
-        android:layout_height="2dp"
-        android:layout_width="fill_parent"
-        android:background="#000080" />
+		/>	
         
 	<TextView
 		android:id="@+id/Distance"
@@ -100,7 +97,7 @@
 		android:text=""
 		android:textSize="13sp"
 		android:textStyle="bold"
-		android:textColor="#b9b9b9"
+		android:textColor="#e40166"
 		android:layout_marginBottom="20dip"
 		android:gravity="center_vertical|center_horizontal"
 		android:layout_below="@+id/NamePlace"
@@ -108,16 +105,35 @@
 		
 	<TextView
 		android:id="@+id/Address"
-		android:layout_width="fill_parent"
+		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
+		android:layout_marginBottom="10dip"
 		android:text=""
 		android:textSize="13sp"
 		android:textStyle="bold"
-		android:textColor="#333333"
-		android:layout_marginBottom="20dip"
-		android:gravity=""
+		android:textColor="#333333"		
 		android:layout_below="@+id/Distance"		
 		/>
+		
+		<Button 
+		android:background="@drawable/map_icon"
+		android:id="@+id/map" 
+		android:layout_toRightOf="@+id/Address"
+		android:layout_below="@+id/Distance"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content" 
+		android:layout_marginLeft="10dip"
+		android:layout_centerVertical="true" 	
+		android:scaleType="fitXY"		
+		/>
+		
+		<View   
+		android:id="@+id/firstDivider"
+        android:layout_height="1dp"
+        android:layout_width="fill_parent"
+        android:background="#999999"
+        android:layout_marginBottom="10dip" 
+        android:layout_below="@+id/Address"/>
 		
 	<TextView
 		android:id="@+id/Phonenumber"
@@ -127,10 +143,18 @@
 		android:textSize="13sp"
 		android:textStyle="bold"
 		android:textColor="#333333"
-		android:layout_marginBottom="20dip"
+		android:layout_marginBottom="10dip"
 		android:gravity=""
-		android:layout_below="@+id/Address"
+		android:layout_below="@+id/firstDivider"
 		/>
+		
+		<View   
+		android:id="@+id/secondDivider"
+        android:layout_height="1dp"
+        android:layout_width="fill_parent"
+        android:background="#999999"
+        android:layout_marginBottom="10dip" 
+        android:layout_below="@+id/Phonenumber"/>
 		
 	<TextView
 		android:id="@+id/Description"
@@ -140,11 +164,161 @@
 		android:textSize="13sp"
 		android:textStyle="bold"
 		android:textColor="#333333"
-		android:layout_marginBottom="20dip"
-		android:gravity="center_vertical|center_horizontal"
-		android:layout_below="@+id/Phonenumber"
+		android:layout_marginBottom="15dip"
+		android:layout_below="@+id/secondDivider"
 		/>
+	
+	<RelativeLayout
+		android:id="@+id/layWS"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:background="@drawable/roundshapepink"
+		android:layout_margin="5dip"
+		android:padding="15dip"
+		android:layout_below="@+id/Description"
+		>
+		<TextView
+		android:id="@+id/outputParam1"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:text="NO DATA AVAILABLE"
+		android:textSize="13sp"
+		android:textStyle="bold"
+		android:textColor="#ffffff"
+		android:layout_marginBottom="10dip"
+		/>
+		<TextView
+		android:id="@+id/outputParam2"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:textSize="13sp"
+		android:textStyle="bold"
+		android:textColor="#ffffff"
+		android:layout_marginBottom="10dip"
+		android:layout_below="@+id/outputParam1"
+		/>
+		<TextView
+		android:id="@+id/outputParam3"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:textSize="13sp"
+		android:textStyle="bold"
+		android:textColor="#ffffff"
+		android:layout_marginBottom="10dip"
+		android:layout_below="@+id/outputParam2"
+		/>	
+	</RelativeLayout>
+	
+	<RelativeLayout
+		android:id="@+id/layComment"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:background="@drawable/roundshape"
+		android:layout_margin="5dip"
+		android:padding="15dip"
+		android:layout_below="@+id/layWS"
+	>
+		<RatingBar 
+		android:id="@+id/ratingbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="4"
+        android:stepSize="0.5"
+        style="?android:attr/ratingBarStyleSmall" 
+        android:focusable="true" 
+        android:clickable="true" 
+        android:layout_weight="1"
+        android:layout_marginBottom="10dip"
+        />
+        
+		<TextView
+		android:id="@+id/comment1"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:textSize="13sp"
+		android:textStyle="bold"
+		android:textColor="#333333"
+		android:layout_marginBottom="5dip"
+		android:layout_below="@+id/ratingbar" 
+		></TextView>
 		
+		<TextView
+		android:id="@+id/userdate"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:textSize="13sp"
+		android:textStyle="bold"
+		android:textColor="#e40166"
+		android:layout_marginBottom="10dip"
+		android:layout_below="@+id/comment1" 
+		></TextView>
+		
+		<Button		
+			android:id="@+id/bShowComment"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/userdate"
+			android:layout_marginLeft="10dip"
+			android:layout_marginRight="10dip"
+			android:layout_marginBottom="20dip" 
+			android:textSize="13sp"
+			android:text="Show More Comments"/>
+		
+		<View   
+		android:id="@+id/thirdDivider"
+        android:layout_height="1dp"
+        android:layout_width="fill_parent"
+        android:background="#999999"
+        android:layout_marginBottom="20dip" 
+        android:layout_below="@+id/bShowComment"/> 
+        
+        <RatingBar 
+		android:id="@+id/ratingbarFill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="4"
+        android:stepSize="0.5"
+        android:focusable="true" 
+        android:clickable="true" 
+        android:layout_weight="1"
+         android:layout_below="@+id/thirdDivider"
+        android:layout_marginBottom="10dip"
+        />    
+		
+		<EditText
+			android:id="@+id/aliasName"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/ratingbarFill"
+			android:layout_marginLeft="10dip"
+			android:layout_marginRight="10dip"
+			android:layout_marginBottom="5dip"
+			android:textSize="13sp"
+			android:hint="Your Alias Name" />
+			
+		<EditText
+			android:id="@+id/fillComment"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/aliasName"
+			android:layout_marginLeft="10dip"
+			android:layout_marginRight="10dip"
+			android:layout_marginBottom="5dip"
+			android:textSize="13sp"
+			android:hint="Your Comment" />
+		
+		<Button		
+			android:id="@+id/bSendComment"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/fillComment"
+			android:layout_marginLeft="10dip"
+			android:layout_marginRight="10dip"
+			android:layout_marginBottom="20dip" 
+			android:textSize="13sp"
+			android:text="Send Comment"/>
+	</RelativeLayout>
+	
   	</RelativeLayout>
     </ScrollView>
 </RelativeLayout>

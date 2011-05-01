@@ -2,17 +2,17 @@ package com.app.lopo;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.Color;
 import android.graphics.Shader;
 import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.ColorDrawable;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,13 +25,19 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.app.model.Category;
-import com.app.model.Place;
 import com.app.webservice.Webservice;
+import com.google.android.maps.GeoPoint;
 
-public class Main extends Activity {
+public class Main extends Activity implements LocationListener{
 	static ArrayList<HashMap<String,String>> list = new ArrayList<HashMap<String,String>>();
+	//Location
+	GeoPoint		geoPoint		= null;
+	LocationManager lm				= null;
+	double			latitude		= 12.937875, longitude = 77.622313;
+	
 	//Adapter for List Menu
 	private static class EfficientAdapter extends BaseAdapter {
 		 private LayoutInflater mInflater;
@@ -116,6 +122,12 @@ public class Main extends Activity {
         RelativeLayout layoutx = (RelativeLayout) findViewById(R.id.bgbottom);
         layoutx.setBackgroundDrawable(bitmapDrawablex);
         
+     // Getting locationManager and reflecting changes over map if distance travel by
+		// user is greater than 500m from current location.
+		lm = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+		//lm.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000L, 500.0f, this);
+		lm.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, this);
+        
         //Menu List        
         //menu = getDataCategory();
         
@@ -155,4 +167,39 @@ public class Main extends Activity {
         
         
     }
+
+
+	@Override
+	public void onLocationChanged(Location location) {
+		if (location != null) {
+			double lat = location.getLatitude();
+			double lng = location.getLongitude();
+			String currentLocation = "The location is changed to Lat: " + lat + " Lng: " + lng;
+			Toast.makeText(this, currentLocation, Toast.LENGTH_LONG).show();
+			geoPoint = new GeoPoint((int) lat * 1000000, (int) lng * 1000000);
+			//myMC.animateTo(geoPoint);
+		}
+		
+	}
+
+
+	@Override
+	public void onProviderDisabled(String arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void onProviderEnabled(String arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void onStatusChanged(String arg0, int arg1, Bundle arg2) {
+		// TODO Auto-generated method stub
+		
+	}
 }

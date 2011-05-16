@@ -23,5 +23,6 @@
 		<activity android:name=".Listplace" android:screenOrientation="portrait"></activity>
 		<activity android:name=".Tester"></activity>
 		<activity android:name=".DetailPlace"></activity>
+		<activity android:name=".Allcomment"></activity>
     </application>
 </manifest>

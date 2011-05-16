@@ -47,6 +47,7 @@
 	android:layout_height="wrap_content"
 	android:layout_below="@+id/actionbar"
 	android:fadeScrollbars="true"
+	android:padding="0dip"
 	>
 	<RelativeLayout
 		android:id="@+id/con"
@@ -84,16 +85,23 @@
 		>
 		</Spinner>
 		
+		<RelativeLayout
+		android:id="@+id/coordinate"
+		android:layout_below="@+id/sCategory"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:background="@drawable/roundshapepink"
+		android:padding="15dip"
+		android:layout_marginBottom="15dip"
+		>
 		<EditText
 		android:id="@+id/txtLatitude"
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
-		android:layout_below="@+id/sCategory"
 		android:hint="Latitude"		
 		android:layout_marginBottom="10dip"
 		>
-		</EditText>
-		
+		</EditText>		
 		<EditText
 		android:id="@+id/txtLongitude"
 		android:layout_width="fill_parent"
@@ -102,12 +110,22 @@
 		android:hint="Longitude"
 		android:layout_marginBottom="10dip">
 		</EditText>
+		<Button
+		android:id="@+id/bGetCoor"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/txtLongitude"
+		android:text="Get Current Coordinate"
+		android:layout_marginTop="10dip"
+		>
+		</Button>
+		</RelativeLayout>
 		
 		<EditText
 		android:id="@+id/txtAddress"
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
-		android:layout_below="@+id/txtLongitude"
+		android:layout_below="@+id/coordinate"
 		android:hint="Address"
 		android:layout_marginBottom="10dip">
 		</EditText>

@@ -58,6 +58,15 @@
 		
 	</RelativeLayout>
 	
+	
+  	<ScrollView 
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:fadeScrollbars="true"
+		android:background="#e0e0df"
+		android:layout_marginLeft="10dip"
+		android:layout_below="@+id/actionbar"
+		>
 	<RelativeLayout
 		android:layout_below="@+id/actionbar"
 		android:layout_width="fill_parent"
@@ -98,12 +107,23 @@
 			android:layout_marginBottom="5dip"
 			android:password="true" 
 			android:hint="password"/>
+		
+		<EditText
+			android:id="@+id/txtRePass"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/txtPass"
+			android:layout_marginLeft="10dip"
+			android:layout_marginRight="10dip"
+			android:layout_marginBottom="5dip"
+			android:password="true" 
+			android:hint="retype password"/>
 			
 		<EditText
 			android:id="@+id/txtMail"
 			android:layout_width="fill_parent"
 			android:layout_height="wrap_content"
-			android:layout_below="@+id/txtPass"
+			android:layout_below="@+id/txtRePass"
 			android:layout_marginLeft="10dip"
 			android:layout_marginRight="10dip"
 			android:layout_marginBottom="20dip"
@@ -118,6 +138,7 @@
 			android:layout_marginRight="10dip"
 			android:layout_marginBottom="20dip" 
 			android:text="Register"/>
+	
 	</RelativeLayout>	
-		
+	</ScrollView>
 </RelativeLayout>

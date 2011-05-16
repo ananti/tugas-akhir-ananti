@@ -9,22 +9,8 @@
 	android:orientation="vertical" 
 	android:paddingTop="10dip">
 	
-	<TextView 
-		android:layout_height="wrap_content"
-		android:layout_width="fill_parent" 
-		android:id="@+id/txtName"
-		android:text="Name" 
-		android:typeface="monospace" 
-		android:textSize="16sp" 
-		android:textStyle="bold"
-		android:textColor="#e40166">
-	</TextView>
-	<LinearLayout 
-		android:id="@+id/LinearLayout05"
-		android:layout_height="wrap_content"
-		android:layout_width="wrap_content">
-		<RatingBar 
-		android:id="@+id/rating"
+	<RatingBar 
+		android:id="@+id/ratingCmt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:numStars="4"
@@ -32,16 +18,21 @@
         style="?android:attr/ratingBarStyleSmall" 
         android:layout_weight="1"
         />
+	
+	<LinearLayout 
+		android:id="@+id/LinearLayout05"
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content">
 		<TextView 
-			android:id="@+id/rev" 
+			android:id="@+id/contentCmt" 
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content" 
 			android:typeface="serif"
 			android:textColor="#333333"
-			android:text="3 review"			
-        	android:layout_marginLeft="5dip"
+			android:text="content msg"			
+        	android:layout_marginLeft="0dip"
 			android:textStyle="bold" 
-			android:textSize="9sp">
+			android:textSize="13sp">
 		</TextView>
 	</LinearLayout>
 	
@@ -50,33 +41,26 @@
 		android:layout_height="wrap_content"
 		android:layout_width="wrap_content">
 		<TextView 
-			android:id="@+id/distance" 
+			android:id="@+id/userCmt" 
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content" 
 			android:typeface="serif"
-			android:textColor="#333333"
-			android:text="0.3 km"
+			android:textColor="#e40166"
+			android:text="user1"
 			android:textStyle="bold" 
-			android:textSize="14sp">
+			android:textSize="13sp">
 		</TextView>
-		
-	</LinearLayout>	
-	<LinearLayout 
-		android:id="@+id/LinearLayout02"
-		android:layout_height="wrap_content"
-		android:layout_width="fill_parent"
-		android:paddingBottom="5dip">
-		
 		<TextView 
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content" 
-			android:text="Mail"
-			android:id="@+id/addrs"
+			android:text="(03-03-11)"
+			android:id="@+id/dateCmt"
 			android:typeface="serif"
-			android:textColor="#333333" 
-			android:textSize="14sp" 
-			android:layout_weight="1">
-		</TextView>		
+			android:textColor="#e40166" 
+			android:textSize="13sp" 
+			android:layout_weight="1"
+			android:layout_marginBottom="5dip">
+		</TextView>
 	</LinearLayout>	
-
+	
 </LinearLayout>
